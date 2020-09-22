@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@Angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -26,7 +26,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
-import {FormsModule} from '@angular/forms';
+
 
 
 
@@ -35,6 +35,8 @@ import {FormsModule} from '@angular/forms';
 // For MDB Angular Free
 //import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
 
+
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -51,6 +53,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
   MatToolbarModule,
   MatButtonModule, 
   MatCardModule,
@@ -60,7 +63,12 @@ import {FormsModule} from '@angular/forms';
   MatMenuModule,
   MatIconModule,
   FormsModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+
+    BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule
+
   ],
 
   exports: [

@@ -9,6 +9,8 @@ export class NewIdeaComponent implements OnInit {
 
   constructor() { }
 
+  name: string;
+  name2: string;
   ngOnInit(): void {
   }
 
