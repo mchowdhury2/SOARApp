@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
+import { from } from 'rxjs';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 const MaterialComponents = [
-  MatMenuModule
+  MatMenuModule,
+  MatCheckboxModule
 ]
 
 @NgModule({

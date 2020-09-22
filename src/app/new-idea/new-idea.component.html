@@ -3,25 +3,35 @@
 <div class= "play-container">
     <p>
         <strong>Product Name: </strong> 
-        <input type="text" [(ngModel)]="name"><br>
+        <input type="text2" [(ngModel)]="name"><br>
     </p>
 </div>
 
 <div class= "play-container">
     <p>
         <strong>Short Description: </strong>
-        <input type="text2" [(ngModel)]="name2"><br>
+        <input type="text2" [(ngModel)]="Description"><br>
     </p>
 </div>
 <div class= "play-container">
     <p>
-        <button mat-button [matMenuTriggerFor]="menu">Tags</button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>Retail</button>
-                 <button mat-menu-item>IOT</button>
-                 <button mat-menu-item>R/T</button>
-            </mat-menu>
-          
+       <strong> Tags</strong> <br>
+          <mat-checkbox>
+              Retail
+          </mat-checkbox>
+          <mat-checkbox>
+              Something
+          </mat-checkbox>
+          <mat-checkbox>
+            or
+          </mat-checkbox>
+          <mat-checkbox>
+            other
+          </mat-checkbox>
+          <mat-checkbox>
+            thing
+                  </mat-checkbox>
+        
           
     </p>
 </div>
