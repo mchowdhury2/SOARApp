@@ -3,8 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { LoginComponent } from './login/login.component';
+
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FeedComponent } from './feed/feed.component';
+import { SearchComponent } from './search/search.component';
+import { ChatComponent } from './chat/chat.component';
+import { NewIdeaComponent } from './new-idea/new-idea.component';
+
 
 
 
@@ -23,17 +30,27 @@ import {FormsModule} from '@angular/forms';
 
 
 
+// For MDB Angular Pro
+//import { NavbarModule, WavesModule, ButtonsModule } from 'ng-uikit-pro-standard'
+// For MDB Angular Free
+//import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
+
+
+
 @NgModule({
-  declarations: [   
+  declarations: [
+    AppComponent,
     LoginComponent,
-    AppComponent
+    ProfileComponent,
+    FeedComponent,
+    SearchComponent,
+    ChatComponent,
+    NewIdeaComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
-
-
   MatToolbarModule,
   MatButtonModule, 
   MatCardModule,
@@ -42,6 +59,7 @@ import {FormsModule} from '@angular/forms';
   MatTableModule,
   MatMenuModule,
   MatIconModule,
+  FormsModule,
   MatProgressSpinnerModule
   ],
 
@@ -55,6 +73,7 @@ import {FormsModule} from '@angular/forms';
        MatTableModule, 
        MatMenuModule,
        MatIconModule,
+       FormsModule,
        MatProgressSpinnerModule
        ],
   
