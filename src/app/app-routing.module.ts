@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+
+
+
 import { LoginComponent } from './login/login.component'; // Add this
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component'; // Add this
