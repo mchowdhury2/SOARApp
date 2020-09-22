@@ -9,6 +9,7 @@ import { FeedComponent } from './feed/feed.component';
 import { SearchComponent } from './search/search.component';
 import { ChatComponent } from './chat/chat.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewIdeaComponent } from './new-idea/new-idea.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
