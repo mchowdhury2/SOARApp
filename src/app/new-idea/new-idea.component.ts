@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewIdeaComponent implements OnInit {
 
-  name: string = '';
-  Description: string = '';
-  
+  Title: string;
+  desc: string;
+
   constructor() { }
 
-  name: string;
-  name2: string;
   ngOnInit(): void {
+  }
+  Submit(): void {
+    
   }
 
 }

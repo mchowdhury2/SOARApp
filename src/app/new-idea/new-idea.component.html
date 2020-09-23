@@ -1,37 +1,51 @@
 <h1>Tell us about your new Idea!</h1>
 
-<div class= "play-container">
-    <p>
-        <strong>Product Name: </strong> 
-        <input type="text2" [(ngModel)]="name"><br>
-    </p>
-</div>
-
-<div class= "play-container">
-    <p>
-        <strong>Short Description: </strong>
-        <input type="text2" [(ngModel)]="Description"><br>
-    </p>
-</div>
-<div class= "play-container">
-    <p>
+<div style="clear:both;position:fixed;height:50%;top:0;width:100%">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>New Idea</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="emaple-form">
+          <table class="eample-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Title" name="Title" required/>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Short Description</mat-label>
+                    <textarea matInput placeholder="Ex. the Idea started as..."name = "desc"></textarea>
+                  </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </mat-card-content>
        <strong> Tags</strong> <br>
           <mat-checkbox>
-              Retail
+              Retail  
           </mat-checkbox>
           <mat-checkbox>
-              Something
+              Something    
           </mat-checkbox>
           <mat-checkbox>
-            or
+            or   
           </mat-checkbox>
           <mat-checkbox>
-            other
+            other   
           </mat-checkbox>
           <mat-checkbox>
-            thing
-                  </mat-checkbox>
-        
-          
-    </p>
-</div>
+            thing   
+          </mat-checkbox>
+                  <br><br>
+                  <mat-checkbox>
+                      would you like to create a Teams chat for this idea?
+                  </mat-checkbox><br>
+                  <mat-card-actions>
+                    <button mat-raised-button (click)="Submit()" color="primary">Submit</button>
+                  </mat-card-actions>
