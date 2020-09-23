@@ -41,3 +41,13 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
+.navbar{
+    justify-content: space-between;
+}
+
+span{
+    padding-right: 1rem;
+    font-size: small;
+    text-decoration: underline;
+
+}
