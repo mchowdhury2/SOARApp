@@ -10,8 +10,8 @@ export class NewIdeaComponent implements OnInit {
 
   idea : Idea = {
     id : 0,
-    author: "Max",
-    title: "new thing",
+    author: "max,",
+    title: "1",
     desc: "I want to",
     tags: "retail",
     link: "http://www.google.com",
