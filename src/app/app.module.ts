@@ -20,6 +20,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MaterialModule } from './material/material.module';
+import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MaterialModule } from './material/material.module';
     FeedComponent,
     SearchComponent,
     ChatComponent,
-    NewIdeaComponent
+    NewIdeaComponent,
+    IdeaDetailComponent
 
   ],
   imports: [

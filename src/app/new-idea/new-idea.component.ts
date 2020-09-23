@@ -9,11 +9,12 @@ import { Idea } from '../idea';
 export class NewIdeaComponent implements OnInit {
 
   idea : Idea = {
-    id : number;
-    title: string;
-    desc: string;
-    tags: string;
-    link: string;
+    id : 0,
+    author: "Max",
+    title: "new thing",
+    desc: "I want to",
+    tags: "retail",
+    link: "http://www.google.com",
   }
 
   constructor() { }

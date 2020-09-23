@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Idea } from '../idea';
 import { IDEAS } from '../mock-ideas'
 
 @Component({
@@ -9,9 +10,13 @@ import { IDEAS } from '../mock-ideas'
 export class SearchComponent implements OnInit {
 
   ideas = IDEAS;
+  selectedIdea : Idea;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onSelect(idea:Idea): void{
+    this.selectedIdea = idea;
 }
+  }
+
