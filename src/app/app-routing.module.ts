@@ -13,12 +13,15 @@ import { NewIdeaComponent } from './new-idea/new-idea.component'; // Add this
 
 
 const routes: Routes = [
-  {path : '', component: LoginComponent},
+  {path : 'login', component: LoginComponent},
   {path : 'profile', component: ProfileComponent},
   {path : 'feed', component: FeedComponent},
   {path : 'search', component: SearchComponent},
   {path : 'chat', component: ChatComponent},
   {path : 'new-idea', component: NewIdeaComponent},
+  {path : '', redirectTo: '/login', pathMatch: "full"},
+  {path : '**', component: LoginComponent},
+  
 
 ];
 

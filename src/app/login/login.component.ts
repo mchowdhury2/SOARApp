@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
-//import { profile } from 'console';
+//import { ProfileComponent } from './profile.component';
 
 @Component({
   selector: 'app-login',
@@ -18,12 +18,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() : void {
-    if (this.username == 'admin' && this.password == 'admin'){
-      //this.router.navigate([profile]);
-    }
-    else {
-      alert("Invalid Username or Password");
-    }
+
+    this.router.navigate(['/feed']);
+
+    // if (this.username == 'admin' && this.password == 'admin'){
+    //   
+    // }
+    // else {
+    //   alert("Invalid Username or Password");
+    // }
   }
 
   signup() : void {
