@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IDEAS } from '../mock-ideas'
 
 @Component({
   selector: 'app-search',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  ideas = IDEAS;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Idea } from '../idea';
 
 @Component({
   selector: 'app-new-idea',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewIdeaComponent implements OnInit {
 
-  Title: string;
-  desc: string;
+  idea : Idea = {
+    id : number;
+    title: string;
+    desc: string;
+    tags: string;
+    link: string;
+  }
 
   constructor() { }
 
