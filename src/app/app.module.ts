@@ -21,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MaterialModule } from './material/material.module';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
     MatTableModule,
     MatMenuModule,
     MatIconModule,
+    MatCheckboxModule,
     FormsModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
