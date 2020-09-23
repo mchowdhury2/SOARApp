@@ -11,7 +11,7 @@ import { FeedComponent } from './feed/feed.component';
 import { SearchComponent } from './search/search.component';
 import { ChatComponent } from './chat/chat.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,7 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
-
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 
 
@@ -67,7 +68,8 @@ import { MaterialModule } from './material/material.module';
 
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
 
   ],
 
@@ -86,6 +88,9 @@ import { MaterialModule } from './material/material.module';
        ],
   
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [NewIdeaComponent]
 })
+HttpClientInMemoryWebApiModule.forRoot(
+  InMemoryDataService, { dataEncapsulation: false }
+)
 export class AppModule { }
