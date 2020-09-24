@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component';
 import { SearchComponent } from './search/search.component';
-import { ChatComponent } from './chat/chat.component';
+// import { ChatComponent } from './chat/chat.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -23,6 +23,9 @@ import { MaterialModule } from './material/material.module';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FilterPipe } from './filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
 
 
 @NgModule({
@@ -32,7 +35,7 @@ import { FilterPipe } from './filter.pipe';
     ProfileComponent,
     FeedComponent,
     SearchComponent,
-    ChatComponent,
+    // ChatComponent,
     NewIdeaComponent,
     IdeaDetailComponent,
     FilterPipe
@@ -55,6 +58,10 @@ import { FilterPipe } from './filter.pipe';
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
+    HttpClientModule,
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
   ],
 
   exports: [

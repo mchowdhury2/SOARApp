@@ -1,10 +1,9 @@
 import { Component, OnInit} from '@angular/core';
-import { Idea } from '../idea';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { IdeaService } from '../idea.service'
-
+import { Idea } from '../idea';
 
 @Component({
   selector: 'app-idea-detail',
@@ -13,9 +12,11 @@ import { IdeaService } from '../idea.service'
 })
 export class IdeaDetailComponent implements OnInit {
   idea:Idea;
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private ideaService: IdeaService,
-    private location: Location) { }
+    private location: Location
+    ) { }
 
   ngOnInit(): void {
     this.getIdea();

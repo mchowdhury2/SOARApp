@@ -12,8 +12,14 @@
 
 <h2>All past Ideas</h2>
 
+<mat-form-field class="example-full-width">
+  <input matInput color = 'warn' placeholder="Search" name="Search"/>
+</mat-form-field>
+
 <ul class="ideas">
   <li *ngFor="let idea of ideas">
+    <a routerLink="/detail/{{idea.id}}">
     <span class="badge">{{idea.id}}</span> {{idea.title}}
+    </a>
   </li>
 </ul>

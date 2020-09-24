@@ -1,12 +1,23 @@
+<mat-toolbar color="warn" class="navbar">   
+  <div><strong>Idée</strong></div>
+  <div>
+      <span routerLink="/profile">MyProfile</span>
+      <span routerLink="/new-idea">New Idea</span>
+      <span routerLink="/feed">Ideas</span>     
+      <span routerLink="/chat">Chat</span>
+      <span routerLink="/login">Logout</span>
+    </div>     
+</mat-toolbar>
+<router-outlet></router-outlet>
 <div *ngIf="idea">
   <h2>{{idea.title}} Details</h2>
   <span>Author: </span>{{idea.author}}
   <div><span>Tags: </span>{{idea.tags}}</div>
   <div><span>description: </span>{{idea.desc}}</div>
-
-  <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzI2OWQ2MjctNTc1OC00Yjk5LWJhZTQtMTRiNTBkYWZmOTg3%40thread.v2/0?context=%7b%22Tid%22%3a%22b9fec68c-c92d-461e-9a97-3d03a0f18b82%22%2c%22Oid%22%3a%22d1d5e787-6be2-4377-be2a-f371ab6f67e6%22%7d">Chat Link</a>
+  <div><span>Chat Link:</span>
+  <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzI2OWQ2MjctNTc1OC00Yjk5LWJhZTQtMTRiNTBkYWZmOTg3%40thread.v2/0?context=%7b%22Tid%22%3a%22b9fec68c-c92d-461e-9a97-3d03a0f18b82%22%2c%22Oid%22%3a%22d1d5e787-6be2-4377-be2a-f371ab6f67e6%22%7d">Click Here</a>
 
   <div>
   </div>
 </div>
-<button (click)="goBack()">go back</button>
+<button mat-raised-button (click)="goBack()" color = 'warn'>go back</button>

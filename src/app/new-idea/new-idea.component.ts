@@ -22,8 +22,5 @@ export class NewIdeaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Submit(): void {
-    
-  }
 
 }
