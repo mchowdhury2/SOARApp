@@ -19,9 +19,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { MaterialModule } from './material/material.module';
+//import { MaterialModule } from './material/material.module';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
 
 
 @NgModule({
@@ -44,6 +48,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatInputModule,
     MatDialogModule,
+    MatSelectModule,
     MatTableModule,
     MatMenuModule,
     MatIconModule,
@@ -52,7 +57,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule,
+    //MaterialModule
   ],
 
   exports: [
@@ -64,6 +69,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
        MatDialogModule, 
        MatTableModule, 
        MatMenuModule,
+       MatSelectModule,
        MatIconModule,
        FormsModule,
        MatProgressSpinnerModule

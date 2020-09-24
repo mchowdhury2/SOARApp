@@ -45,13 +45,7 @@
               </mat-form-field>
             </td>
           </tr>
-          <tr>
-            <td>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Role" name="role" required/>
-              </mat-form-field>
-            </td>
-          </tr>
+          
           <tr>
             <td>
               <mat-form-field class="example-full-width">
@@ -69,12 +63,41 @@
         </table>
       </form>
     </mat-card-content>
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select Role</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let role of roles" [value]="role.value">
+          {{role.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
   
+<!-- 
+    <button mat-button [matMenuTriggerFor]="menu" [matMenuTriggerData]="{ role: 'Select a ROLE' }" required>Click to Select Role</button>
+    <mat-menu #menu="matMenu">
+      <ng-template matMenuContent>
+        <button mat-menu-item (click)="selectedRole('sd')">Software Developer</button>
+        <button mat-menu-item (click)="selectedRole('ba')">Business Analyst</button>
+        <button mat-menu-item (click)="selectedRole('pm')">Project Manager</button>
+        <button mat-menu-item (click)="selectedRole('it')">IT Technician</button>
+      </ng-template>
+    </mat-menu> -->
+
+    <br>
+    
+
     <mat-card-actions>
       <button mat-raised-button (click)="save()" color="warn" routerLink="/feed" >Save</button>
     </mat-card-actions>
   </mat-card>
 
 
+ 
+
 
   <router-outlet></router-outlet>
+  <!-- <app-feed [parentData]="roleValue"></app-feed> -->

@@ -1,25 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-
-
-export interface PeriodicElement {
-  title: string;
-  description: string;
-  chatroom: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {title: 'IoT', description: 'Idea about internet of things', chatroom: '/chat'},
-  {title: 'Retail', description: 'Idea about retail.', chatroom: '/chat'},
-  {title: 'Database', description: 'Idea about database.', chatroom: '/chat'},
-  {title: 'SOAR', description: 'Idea about SOAR Orientation', chatroom: '/chat'},
-  {title: 'IoT', description: 'Idea about internet of things', chatroom: '/chat'},
-  {title: 'IoT', description: 'Idea about internet of things', chatroom: '/chat'},
-  {title: 'Retail', description: 'Idea about retail.', chatroom: '/chat'},
-  {title: 'Database', description: 'Idea about database.', chatroom: '/chat'},
-  {title: 'SOAR', description: 'Idea about SOAR Orientation', chatroom: '/chat'},
-  {title: 'IoT', description: 'Idea about internet of things', chatroom: '/chat'},
-  
-];
+import { DataSource } from '@angular/cdk/table';
+import { Component, Input, OnInit } from '@angular/core';
+import { Idea } from '../idea';
+import { IDEAS } from '../mock-ideas'
 
 
 @Component({
@@ -29,13 +11,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class FeedComponent implements OnInit {
 
-  displayedColumns: string[] = ['title', 'description', 'chatroom'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['id', 'author', 'title', 'desc', 'tags', 'link'];
+    
+  public ideas = IDEAS;
+  dataSource = IDEAS.slice(0,11);
 
 
   constructor() { }
 
   ngOnInit(): void {
+    
+
   }
 
 }

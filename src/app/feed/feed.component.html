@@ -3,7 +3,6 @@
       <div>
           <span routerLink="/profile">MyProfile</span>
           <span routerLink="/new-idea">New Idea</span>
-          <span routerLink="/chat">Chat</span>
       <span routerLink="/search">Search</span>
           <span routerLink="/login">Logout</span>
         </div>     
@@ -17,21 +16,37 @@
             The actual rendered columns are set as a property on the row definition" -->
     
       <!-- Column -->
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef> Author </th>
+        <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef> Title </th>
         <td mat-cell *matCellDef="let element"> {{element.title}} </td>
       </ng-container>
     
       <!-- Column -->
-      <ng-container matColumnDef="description">
+      <ng-container matColumnDef="desc">
         <th mat-header-cell *matHeaderCellDef> Description </th>
-        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.desc}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tags">
+        <th mat-header-cell *matHeaderCellDef> Tags </th>
+        <td mat-cell *matCellDef="let element"> {{element.tags}} </td>
       </ng-container>
     
       
-      <ng-container  matColumnDef="chatroom">
-        <th mat-header-cell *matHeaderCellDef> Click to enter Chatroom </th>
-        <td mat-cell *matCellDef="let element" class="chatroom" routerLink='{{element.chatroom}}'> Chat </td>
+      <ng-container  matColumnDef="link">
+        <th mat-header-cell *matHeaderCellDef> Click to enter Teams </th>
+        <td mat-cell *matCellDef="let element" class="chatroom" outerLink='{{element.link}}'> link </td>
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
