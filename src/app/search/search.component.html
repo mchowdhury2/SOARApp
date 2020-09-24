@@ -1,4 +1,16 @@
-<h2>All Ideas</h2>
+<mat-toolbar color="warn" class="navbar">   
+  <div><strong>Idée</strong></div>
+  <div>
+      <span routerLink="/profile">MyProfile</span>
+      <span routerLink="/new-idea">New Idea</span>
+      <span routerLink="/feed">Ideas</span>     
+      <span routerLink="/chat">Chat</span>
+      <span routerLink="/login">Logout</span>
+    </div>     
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<h2>All past Ideas</h2>
 
 
 <ul class="ideas">
@@ -10,22 +22,11 @@
 </ul>
 
 <div *ngIf="selectedIdea">
-    <h2>{{selectedIdea.title | uppercase}} Details</h2>
+    <h2>{{selectedIdea.title}} Details</h2>
     <span>Author: </span>{{selectedIdea.author}}
     <div><span>Tags: </span>{{selectedIdea.tags}}</div>
     <div><span>description: </span>{{selectedIdea.desc}}</div>
-    <div><span>Link: </span>{{selectedIdea.link}}</div>
+    <button mat-raised-button color =  "warn">Chat Link</button>
     <div>
     </div>
   </div>
-<mat-toolbar color="warn" class="navbar">   
-    <div><strong>Idée</strong></div>
-    <div>
-        <span routerLink="/profile">MyProfile</span>
-        <span routerLink="/new-idea">New Idea</span>
-        <span routerLink="/feed">Ideas</span>     
-        <span routerLink="/chat">Chat</span>
-        <span routerLink="/login">Logout</span>
-      </div>     
-  </mat-toolbar>
-<router-outlet></router-outlet>
