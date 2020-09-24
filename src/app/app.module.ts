@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component';
 import { SearchComponent } from './search/search.component';
-import { ChatComponent } from './chat/chat.component';
+// import { ChatComponent } from './chat/chat.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -19,13 +19,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-//import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './material/material.module';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+
 import {MatSelectModule} from '@angular/material/select';
 
 
 
+
+import { FilterPipe } from './filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
+ 
 
 
 @NgModule({
@@ -35,9 +42,10 @@ import {MatSelectModule} from '@angular/material/select';
     ProfileComponent,
     FeedComponent,
     SearchComponent,
-    ChatComponent,
+    // ChatComponent,
     NewIdeaComponent,
-    IdeaDetailComponent
+    IdeaDetailComponent,
+    FilterPipe
 
   ],
   imports: [
@@ -57,7 +65,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     FormsModule,
-    //MaterialModule
+
+
+    MaterialModule,
+    HttpClientModule,
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
   ],
 
   exports: [

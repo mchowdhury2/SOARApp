@@ -3,19 +3,15 @@
     <div>
         <span routerLink="/profile">MyProfile</span>
         <span routerLink="/feed">Ideas</span>
-        <span routerLink="/chat">Chat</span>
       <span routerLink="/search">Search</span>
         <span routerLink="/login">Logout</span>
       </div>     
 </mat-toolbar>
 
-
-<h1>Tell us about your new Idea!</h1>
-
 <div >
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>New Idea</mat-card-title>
+        <mat-card-title><H1>New Idea</H1></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <form class="emaple-form">
@@ -37,27 +33,32 @@
             </tr>
           </table>
         </form>
+        <button mat-raised-button [matMenuTriggerFor]="menu">Role</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Software Developer</button>
+  <button mat-menu-item>BSA</button>
+  <button mat-menu-item>Product Manager</button>
+  <button mat-menu-item>SCRUM</button>
+</mat-menu>
       </mat-card-content>
        <strong> Tags</strong> <br>
           <mat-checkbox>
-              Retail  
+            Retail  
           </mat-checkbox>
           <mat-checkbox>
-              Something    
+            IOT    
           </mat-checkbox>
           <mat-checkbox>
-            or   
+            Database   
           </mat-checkbox>
           <mat-checkbox>
-            other   
+            SOAR   
           </mat-checkbox>
           <mat-checkbox>
-            thing   
+            Other   
           </mat-checkbox>
-                  <br><br>
-                  <mat-checkbox>
-                      would you like to create a Teams chat for this idea?
-                  </mat-checkbox><br>
                   <mat-card-actions>
-                    <button mat-raised-button (click)="Submit()" color="primary">Submit</button>
+                    <a routerLink="/search">
+                    <button mat-raised-button color = "warn">Submit</button>
+                    </a>
                   </mat-card-actions>

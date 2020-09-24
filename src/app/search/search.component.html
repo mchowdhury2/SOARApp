@@ -4,21 +4,29 @@
       <span routerLink="/profile">MyProfile</span>
       <span routerLink="/new-idea">New Idea</span>
       <span routerLink="/feed">Ideas</span>     
-      <span routerLink="/chat">Chat</span>
       <span routerLink="/login">Logout</span>
     </div>     
 </mat-toolbar>
 
-<h2>All Ideas</h2>
 
+<h2>All Ideas</h2>
+<router-outlet></router-outlet>
+
+<h2>All past Ideas</h2>
+
+
+<mat-form-field class="example-full-width">
+  <input matInput color = 'warn' placeholder="Search" name="Search"/>
+</mat-form-field>
 
 <ul class="ideas">
-  <li *ngFor="let idea of ideas" 
-  [class.selected]="idea === selectedIdea"
-  (click)="onSelect(idea)">
+  <li *ngFor="let idea of ideas">
+    <a routerLink="/detail/{{idea.id}}">
     <span class="badge">{{idea.id}}</span> {{idea.title}}
+    </a>
   </li>
 </ul>
+
 
 <div *ngIf="selectedIdea">
     <h2>{{selectedIdea.title | uppercase}} Details</h2>
@@ -31,3 +39,4 @@
   </div>
 
 <router-outlet></router-outlet>
+

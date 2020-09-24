@@ -14,15 +14,13 @@ export class NewIdeaComponent implements OnInit {
     title: "1",
     desc: "I want to",
     tags: "retail",
+    role: "BSA",
     link: "http://www.google.com",
   }
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-  Submit(): void {
-    
   }
 
 }
