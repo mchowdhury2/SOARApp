@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 
-
+import { IdeaDetailComponent} from './idea-detail/idea-detail.component'
 import { LoginComponent } from './login/login.component'; // Add this
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component'; // Add this
@@ -13,6 +13,7 @@ import { NewIdeaComponent } from './new-idea/new-idea.component'; // Add this
 
 
 const routes: Routes = [
+  {path: 'detail/:id', component: IdeaDetailComponent},
   {path : 'login', component: LoginComponent},
   {path : 'profile', component: ProfileComponent},
   {path : 'feed', component: FeedComponent},

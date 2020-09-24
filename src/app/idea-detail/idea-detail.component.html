@@ -1,13 +1,12 @@
 <div *ngIf="idea">
+  <h2>{{idea.title}} Details</h2>
+  <span>Author: </span>{{idea.author}}
+  <div><span>Tags: </span>{{idea.tags}}</div>
+  <div><span>description: </span>{{idea.desc}}</div>
 
-    <h2>{{idea.title | uppercase}} Details</h2>
-    <div><span>Tags: </span>{{idea.tags}}</div>
-    <div><span>description: </span>{{idea.desc}}</div>
-    <div><span>Link: </span>{{idea.link}}</div>
-    <div>
-        <label>name:
-            <input [(ngModel)]="idea.title" placeholder="title"/>
-      </label>
-    </div>
-  
+  <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzI2OWQ2MjctNTc1OC00Yjk5LWJhZTQtMTRiNTBkYWZmOTg3%40thread.v2/0?context=%7b%22Tid%22%3a%22b9fec68c-c92d-461e-9a97-3d03a0f18b82%22%2c%22Oid%22%3a%22d1d5e787-6be2-4377-be2a-f371ab6f67e6%22%7d">Chat Link</a>
+
+  <div>
   </div>
+</div>
+<button (click)="goBack()">go back</button>

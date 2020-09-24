@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Idea } from '../idea';
+import { IdeaService } from '../idea.service';
 import { IDEAS } from '../mock-ideas'
 
 @Component({
@@ -9,14 +10,15 @@ import { IDEAS } from '../mock-ideas'
 })
 export class SearchComponent implements OnInit {
 
-  ideas = IDEAS;
-  selectedIdea : Idea;
-  constructor() { }
+  ideas: Idea[];
+  constructor(private ideaService: IdeaService) { }
 
   ngOnInit(): void {
+    this.getIdeas();
   }
-  onSelect(idea:Idea): void{
-    this.selectedIdea = idea;
-}
+  getIdeas(): void {
+    this.ideaService.getIdeas()
+        .subscribe(ideas => this.ideas = ideas)
+  }
   }
 

@@ -12,21 +12,8 @@
 
 <h2>All past Ideas</h2>
 
-
 <ul class="ideas">
-  <li *ngFor="let idea of ideas" 
-  [class.selected]="idea === selectedIdea"
-  (click)="onSelect(idea)">
+  <li *ngFor="let idea of ideas">
     <span class="badge">{{idea.id}}</span> {{idea.title}}
   </li>
 </ul>
-
-<div *ngIf="selectedIdea">
-    <h2>{{selectedIdea.title}} Details</h2>
-    <span>Author: </span>{{selectedIdea.author}}
-    <div><span>Tags: </span>{{selectedIdea.tags}}</div>
-    <div><span>description: </span>{{selectedIdea.desc}}</div>
-    <button mat-raised-button color =  "warn">Chat Link</button>
-    <div>
-    </div>
-  </div>

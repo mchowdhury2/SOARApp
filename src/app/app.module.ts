@@ -22,6 +22,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MaterialModule } from './material/material.module';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     SearchComponent,
     ChatComponent,
     NewIdeaComponent,
-    IdeaDetailComponent
+    IdeaDetailComponent,
+    FilterPipe
 
   ],
   imports: [

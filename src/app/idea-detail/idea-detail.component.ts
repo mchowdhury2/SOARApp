@@ -1,5 +1,10 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Idea } from '../idea';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { IdeaService } from '../idea.service'
+
 
 @Component({
   selector: 'app-idea-detail',
@@ -7,10 +12,20 @@ import { Idea } from '../idea';
   styleUrls: ['./idea-detail.component.css']
 })
 export class IdeaDetailComponent implements OnInit {
-  @Input() idea : Idea;
-  constructor() { }
+  idea:Idea;
+  constructor(private route: ActivatedRoute,
+    private ideaService: IdeaService,
+    private location: Location) { }
 
   ngOnInit(): void {
+    this.getIdea();
   }
-
+  getIdea(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.ideaService.getIdea(id)
+      .subscribe(idea => this.idea = idea);
+  }
+  goBack(): void {
+    this.location.back();
+  }
 }
